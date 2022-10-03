@@ -50,6 +50,40 @@
         </form>
       </div>
     </div>
+
+    <!-- creating the card to show the result to user using Bulma CSS framework -->
+    <section class="section">
+      <div class="hero result-header has-text-centered"></div>
+      <div
+        class="columns is-variable is-6 is-multiline is-mobile has-text-centered"
+        id="recipes"
+      >
+        <!-- start -->
+        <div class="column is-flex mt-2 is-3-desktop is-4-tablet is-6-mobile">
+          <div class="card rec-card">
+            <div class="card-image is-size-2 has-text-centered">
+              <img
+                src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card-content recipe-info" data-recipeID="">
+              <p class="title is-size-3 has-text-white">Title</p>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+    </section>
+     <!-- creating modal to show the instruction and ingridient for the recepie -->
+    </div>
+    <div class="modal" id="recipe-modal">
+      <div class="modal-background"></div>
+        <div class="re-info" id="re-info"></div>
+        <button id="close-popup" class="modal-close is-large" aria-label="close">
+        </button>
+      </div>
+    </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

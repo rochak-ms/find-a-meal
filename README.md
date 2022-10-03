@@ -1,4 +1,4 @@
-# Meal Finder 
+# Find a Recipe
 
 # User Story:
 I WANT a product that can help me with my diet

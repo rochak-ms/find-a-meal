@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Maven Pro', sans-serif; */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  animation: changeBg 20s infinite alternate linear;
+  color: #333;
+  font-family: 'Abel', sans-serif;
+  font-weight: bolder;
+}
+
+/* Changing colors in background */
+@keyframes changeBg {
+  25%{
+    background-color: #f9dd4d;
+  }
+  50%{
+    background-color: #c9f1f2;
+  }
+  75%{
+    background-color: #EC6834;
+  }
+  100%{
+    background-color: #ea4e3d;
+  }
+}
+
+/* styling header title and user input section */
+.effect{
+  line-height: 1.2em;
+  color: #0000;
+  text-shadow: 
+    0 0 #000, 
+    0 4rem #1095c1;
+  overflow: hidden;
+  transition: .4s;
+}
+.effect:hover {
+  text-shadow: 
+    0 -4rem #000, 
+    0 0 #1095c1;
+}
+
+form{
+  width: 25rem;
+  min-width: 10rem
+}
+.input{
+  border:1px solid black;
+  width: 100%;
+  border-right: 0px solid;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  color: #fff;
+  background-color: #333;
+  text-align: center;
+  box-shadow: 0 2px 8px 0 #e61415, 0px 11px 7px 0 rgb(0 0 0 / 19%);
+}
+.input::placeholder{
+  color: rgba(203, 195, 195, 0.613);
+}
+
+.button.is-rounded{
+  cursor: pointer;
+  padding: 1rem; 
+  border: 1px solid black;
+  border-left: 0;
+  background: #e61415;
+  box-shadow: 3px 2px 8px 0px #e61415, 0px 12px 15px 0 rgb(0 0 0 / 19%);
+}

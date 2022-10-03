@@ -4,12 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- linking tailwind.css and style.css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- linking bulma CSS framework and fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- linking style.css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Find A Recipe</title>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="container.is-widescreen is-fluid is-flex is-flex-direction-column is-justify-content-center is-justify-content-center has-text-centered"
+    >
+      <!-- header title for the page -->
+      <h1
+        class="title effect is-size-2 is-size-1-tablet has-text-weight-bold mt-6"
+      >
+        Find A Recipe
+      </h1>
 
-  <!-- linking main.js -->
+      <div
+        class="field has-addons is-flex is-justify-content-center is-justify-content-center"
+      >
+        <!-- user input for searching recipes -->
+        <form class="control is-flex" id="submit">
+          <input
+            class="input"
+            id="search"
+            type="type"
+            placeholder="Search for a Recipe. eg. Chicken"
+          />
+          <p class="control">
+            <button class="button is-rounded" type="submit">
+              <i class="fas fa-search has-text-white"></i>
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </html>

@@ -14,12 +14,12 @@ font-family: 'Maven Pro', sans-serif; */
 
 body {
   animation: changeBg 20s infinite alternate linear;
-  color: #333;
-  font-family: 'Abel', sans-serif;
+  color: rgb(1, 1, 1);
+  font-family: 'Fjalla One', sans-serif;
+  min-height: 100vh;
   font-weight: bolder;
 }
 
-/* Changing colors in background */
 @keyframes changeBg {
   25%{
     background-color: #f9dd4d;

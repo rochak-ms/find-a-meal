@@ -20,74 +20,135 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Find A Recipe</title>
   </head>
-  <body>
-    <div
-      class="container.is-widescreen is-fluid is-flex is-flex-direction-column is-justify-content-center is-justify-content-center has-text-centered"
+
+<body>
+
+  <section class="hero is-medium">
+    <div class="hero-body content is-size-1">
+     <h1> Find A Meal</h1>
+    </div>
+</section>
+
+<nav class="navbar"></nav>
+
+  <div class="container.is-widescreen is-fluid is-flex is-flex-direction-column is-justify-content-center is-justify-content-center has-text-centered"
+  >
+    <!-- header title for the page -->
+    <h1
+            class="title effect is-size-2 is-size-1-tablet has-text-weight-bold mt-6"
     >
-      <!-- header title for the page -->
-      <h1
-        class="title effect is-size-2 is-size-1-tablet has-text-weight-bold mt-6"
-      >
-        Find A Recipe
-      </h1>
+    <header class="first-row"><i class="fas fa-utensils"></i>  Find a Meal</header>
+    </h1>
 
-      <div
-        class="field has-addons is-flex is-justify-content-center is-justify-content-center"
-      >
-        <!-- user input for searching recipes -->
-        <form class="control is-flex" id="submit">
-          <input
-            class="input"
-            id="search"
-            type="type"
-            placeholder="Search for a Recipe. eg. Chicken"
-          />
-          <p class="control">
-            <button class="button is-rounded" type="submit">
-              <i class="fas fa-search has-text-white"></i>
-            </button>
-          </p>
-        </form>
+    <div class="field has-addons is-flex is-justify-content-center is-justify-content-center">
+      <!-- user input for searching recipes -->
+      <form class="control is-flex" id="submit">
+        <input class="input" id="search" placeholder="Search for a Recipe. eg. Chicken" type="text"/>
+
+        <p class="control">
+          <button class="button is-rounded" type="submit">
+            <i class="fas fa-search has-text-white"></i>
+          </button>
+        </p>
+      </form>
+    </div>
+
+  </div>
+  <!-- creating the card to show the result to user using Bulma CSS framework -->
+  <section class="section">
+    <div class="hero result-header has-text-centered"></div>
+    <div class="columns is-variable is-6 is-multiline is-mobile has-text-centered"
+            id="recipes">
+    </div>
+  </section>
+  <!-- start -->
+  <!-- <div class="column is-flex mt-2 is-3-desktop is-4-tablet is-6-mobile">
+    <div class="card rec-card">
+      <div class="card-image is-size-2 has-text-centered">
+        <img
+          src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
+          alt=""
+        />
       </div>
+      <div class="card-content recipe-info" data-recipeID="">
+        <p class="title is-size-3 has-text-white">Title</p>
+      </div>
+    </div>
+  </div> -->
+  <!-- end -->
+
+  <!-- creating modal to show the instruction and ingridient for the recepie -->
+
+  <div  id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div  id="recipie-area" class="recipie-area">
+      <div class="modal-card">
+
+      <header class="modal-card-head">
+      <p class="modal-card-title" id="recipe-name"></p>
+      </header>
+
+    <section class="modal-card-body">
+      <div class="content">
+        <div><span class="tag is-danger" id="tag"></span>
+          <span class="tag is-danger" id="tag2"></span>
+
+
+        </div>
+        
+      <img id="recipe-img" class="infoImg" src="" alt="A plated meal with a salmon filet, salad, and lime wedge." width="450">
+      
+      
+
+
+    <div class="nutrition"> <p>Nutritional Information:</p>
+      <label for="amount-servings">Serving Per Person </label>
+      <input id="amount-servings" type="text" name="amount-servings"/>
+      <button id="split">Split</button>
+    
+    <table class='table table is-bordered' >
+      <thead class="nutrient-list">
+          <tr>
+            <th> Calories</th>
+            <th> Fat</th>
+            <th>Carbs</th>
+            <th> Protein</th>
+            <th > Sugar</th>
+          </tr>
+       </thead>
+      <tbody>
+          <tr>
+            <td id="calories-display"></td>
+            <td id="fat-display"></td>
+            <td id="carb-display"></td>
+            <td id="protien-display"></td>
+            <td id="sugar-display"></td>
+          </tr>      
+</tbody>
+
+  </table>
+</div>
+
+
+
+      <h3 class="title is-size-4 mt-5 mb-3">Ingredients:</h3>
+      <ul id="ingredients"></ul>
+      <h3 class="title is-size-4 mt-5 mb-3">Instruction:</h3>
+      <ul id="instructions"></ul>
+    </div>
+  </section>
+</div>
+    <div><button id="close-popup" class="modal-close is-large" aria-label="close"></button> </div>
+  </div>
+
+
+
+    
+
    
-       </div>
-    <!-- creating the card to show the result to user using Bulma CSS framework -->
-    <section class="section">
-      <div class="hero result-header has-text-centered"></div>
-      <div
-        class="columns is-variable is-6 is-multiline is-mobile has-text-centered"
-        id="recipes"
-      >
-        <!-- start -->
-        <!-- <div class="column is-flex mt-2 is-3-desktop is-4-tablet is-6-mobile">
-          <div class="card rec-card">
-            <div class="card-image is-size-2 has-text-centered">
-              <img
-                src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
-                alt=""
-              />
-            </div>
-            <div class="card-content recipe-info" data-recipeID="">
-              <p class="title is-size-3 has-text-white">Title</p>
-            </div>
-          </div>
-        </div> -->
-        <!-- end -->
-      </div>
-    </section>
-     <!-- creating modal to show the instruction and ingridient for the recepie -->
-    </div>
-    <div class="modal" id="recipe-modal">
-      <div class="modal-background"></div>
-        <div class="re-info" id="re-info"></div>
-        <button id="close-popup" class="modal-close is-large" aria-label="close">
-        </button>
-      </div>
-    </div>
- 
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+  <!-- jQuery linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="./assets/js/main.js"></script>
+  </body>
 </html>

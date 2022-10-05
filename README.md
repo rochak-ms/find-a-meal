@@ -28,7 +28,7 @@ The motivation behind creating Meal Finder was to create a Diet Planning web app
 
 # Links
 Below is the link related to the project:
-- Project Homepage: https://github.com/rochak-ms/find-a-meal
+- Project Homepage: https://rochak-ms.github.io/find-a-meal/
 - Repository: https://github.com/rochak-ms/find-a-meal
 
 # Credits:

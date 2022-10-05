@@ -18,36 +18,39 @@
     />
     <!-- linking style.css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Find A Recipe</title>
+    <title>Find A Meal</title>
   </head>
 
 <body>
 
-  <section class="hero is-medium">
-    <div class="hero-body content is-size-1">
-     <h1> Find A Meal</h1>
+  <section class="hero is-widescreen">
+    <div class="hero-body content is-size-2">
+    <h1 class="ml-1 mb-1"> Find A Meal</h1>
     </div>
 </section>
 
 <nav class="navbar"></nav>
 
-  <div class="container.is-widescreen is-fluid is-flex is-flex-direction-column is-justify-content-center is-justify-content-center has-text-centered"
+  <div class="container is-widescreen is-fluid is-flex is-flex-direction-column is-justify-content-center is-justify-content-center has-text-centered"
   >
     <!-- header title for the page -->
     <h1
             class="title effect is-size-2 is-size-1-tablet has-text-weight-bold mt-6"
     >
-    <header class="first-row"><i class="fas fa-utensils"></i>  Find a Meal</header>
+    <span class="icon">
+      <i class="fas fa-utensils mr-2"></i>
+    </span>
+Find a Meal
     </h1>
 
     <div class="field has-addons is-flex is-justify-content-center is-justify-content-center">
       <!-- user input for searching recipes -->
       <form class="control is-flex" id="submit">
-        <input class="input" id="search" placeholder="Search for a Recipe. eg. Chicken" type="text"/>
+        <input class="input p1-search" id="search" placeholder="Search for a Recipe. eg. Chicken" type="text"/>
 
         <p class="control">
           <button class="button is-rounded" type="submit">
-            <i class="fas fa-search has-text-white"></i>
+            <i class="fas fa-search fa-beat-fade has-text-white"></i>
           </button>
         </p>
       </form>
@@ -61,21 +64,6 @@
             id="recipes">
     </div>
   </section>
-  <!-- start -->
-  <!-- <div class="column is-flex mt-2 is-3-desktop is-4-tablet is-6-mobile">
-    <div class="card rec-card">
-      <div class="card-image is-size-2 has-text-centered">
-        <img
-          src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
-          alt=""
-        />
-      </div>
-      <div class="card-content recipe-info" data-recipeID="">
-        <p class="title is-size-3 has-text-white">Title</p>
-      </div>
-    </div>
-  </div> -->
-  <!-- end -->
 
   <!-- creating modal to show the instruction and ingridient for the recepie -->
 
@@ -90,32 +78,24 @@
 
     <section class="modal-card-body">
       <div class="content">
-        <div><span class="tag is-danger" id="tag"></span>
-          <span class="tag is-danger" id="tag2"></span>
-
-
-        </div>
-        
-      <img id="recipe-img" class="infoImg" src="" alt="A plated meal with a salmon filet, salad, and lime wedge." width="450">
+      <img id="recipe-img" class="infoImg" src="" alt="">
       
-      
-
-
-    <div class="nutrition"> <p>Nutritional Information:</p>
-      <label for="amount-servings">Serving Per Person </label>
-      <input id="amount-servings" type="text" name="amount-servings"/>
-      <button id="split">Split</button>
-    
-    <table class='table table is-bordered' >
+      <section class="panel is-warning has-text-centered">
+        <h2 class="nutrition panel-heading">Nutritional Information</h2>
+        <p class="panel-tabs">
+        <input class="input is-warning" id="amount-servings" type="text" name="amount-servings" placeholder="Enter the number of servings">
+        <button class="button has-background-info" id="split">Split</button>
+      </p>
+        <table class="table is-bordered">
       <thead class="nutrient-list">
-          <tr>
-            <th> Calories</th>
-            <th> Fat</th>
-            <th>Carbs</th>
-            <th> Protein</th>
-            <th > Sugar</th>
+          <tr class="is-warning">
+            <th class="is-warning">Calories</th>
+            <th class="is-warning">Fat</th>
+            <th class="is-warning">Carbs</th>
+            <th class="is-warning">Protein</th>
+            <th class="is-warning">Sugar</th>
           </tr>
-       </thead>
+      </thead>
       <tbody>
           <tr>
             <td id="calories-display"></td>
@@ -123,29 +103,20 @@
             <td id="carb-display"></td>
             <td id="protien-display"></td>
             <td id="sugar-display"></td>
-          </tr>      
-</tbody>
-
-  </table>
-</div>
-
-
+          </tr>     
+      </tbody>
+      </table>
+    </section>
 
       <h3 class="title is-size-4 mt-5 mb-3">Ingredients:</h3>
       <ul id="ingredients"></ul>
       <h3 class="title is-size-4 mt-5 mb-3">Instruction:</h3>
-      <ul id="instructions"></ul>
+      <p id="instructions"></p>
     </div>
   </section>
 </div>
     <div><button id="close-popup" class="modal-close is-large" aria-label="close"></button> </div>
   </div>
-
-
-
-    
-
-   
   <!-- jQuery linked -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

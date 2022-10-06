@@ -1,48 +1,79 @@
-# Meal Finder
+# Find A Meal
 
-# User Story:
+Find a meal project is made to provide the user the ability to find a meal they love to eat and provide them with the full ingredients and instructions so that any individual could be able to cook, even when they have never done cooking in their life. This project also provides nutritional details of the meal that the user will be searching for so the user know how much of nutritional values the chosen meal contains.
 
-I WANT a product that can help me with my diet
-Recommended items should be displayed before a specified search
-I WANT to be able to search for meals with a search bar.
-THEN I search for my meal I want to select
-THEN it takes me to the new page or pop out
-THEN information on my chosen item is displayed
-It MUST include images, nutritional values, and a recipe.
-![image](https://user-images.githubusercontent.com/110377745/193543351-5e312fc0-37db-494c-a82f-8a7484edda4e.png)
+## User Story
 
-# Description:
+```
+AS A user
+- I WANT to find a meal with the instructions on how to cook that meal and what ingredients is need to prepare the meal with its nutritional values
+- SO THAT I can cook a meal according to my nutritional requirements
+```
 
-Meal Finder was created with the idea of combining a meal database with nutritional calculator to maximise useful information for the user.
-The motivation behind creating Meal Finder was to create a Diet Planning web application with simple UI and Minimal Re-direct to deliver the most valuable information for nutrition seekers and indecisive users.
+## Acceptance Criteria
 
-# Content
+```
+GIVEN I am searching for a meal
+WHEN I enter the meal name and click the search button
+THEN I am presented with a multiple results of meal related with my search values
+WHEN I click on one of the result meal
+THEN I am presented with a popup modal
+WHEN I check the modal
+THEN I am presented with a Image of the meal and the ingredient and instructions to cook that meal. And also the nutritional values for that particular meal
+WHEN I click on the close button of popup modal
+THEN I should see the previous page with my old meal search results
+```
 
-# Usage
+# Assets
 
-1.Enter Ingredients into Search Bar
-!![image](https://user-images.githubusercontent.com/110377745/193549974-b99627c9-c470-4679-a57b-153fa1ccb575.png)
+## The following animation demonstrates the application functionality:
 
-2.Select Meal from options provided below
-!![image](https://user-images.githubusercontent.com/110377745/193550090-f06e1960-77bf-480a-b8d6-5785acda22e1.png)
+### 1. Home page with page tile and search bar and button
 
-3.Read Nutritional information and instructions provided
-!![image](https://user-images.githubusercontent.com/110377745/193549603-eaccb084-5a04-49cd-abbe-74ab20407260.png)
+![A user is provided with a front page where a user see the title of the page and a section to enter their search value and a button to search for the result of that value](./assets/images/Project%20-%20Start%20Page.gif)
+
+#
+
+### 2. User input and search results
+
+![A user enter the value for search and upon clicking the search button will be able to see multiple results](./assets/images/input%20-%20search%20result.gif)
+
+#
+
+### 3. Popup Modal with a close button on right side. Modals shows the meal tile, image, ingredients, instructions and nutritional values
+
+![A user is provided with a Popup Modal with a close button on right side. Modals shows the meal tile, image, ingredients, instructions and nutritional values](./assets/images/Modal-details.gif)
+
+#
+
+# Installation
+
+- download the zip file, or use GitHub's guidelines to clone the repository from the GitHub repository provided in links section below
 
 # Links
 
 Below is the link related to the project:
 
-- Project Homepage: https://rochak-ms.github.io/find-a-meal/
-- Repository: https://github.com/rochak-ms/find-a-meal
+- Deployed application - https://rochak-ms.github.io/find-a-meal/
 
-# Credits:
+- GitHub repository - https://github.com/rochak-ms/find-a-meal
 
-[Edamam Nutrition API](https://www.edamam.com/).
-[The Meal API](https://www.themealdb.com/api.php).
+# Credits
 
-# Contributors:
+- [Bulma CSS framework](https://bulma.io/documentation/)
+- [The Meal API](https://www.themealdb.com/api.php).
+- [Edamam Nutrition API](https://www.edamam.com/).
 
-Gina:https://github.com/GEEZEE91
-Jerrome:https://github.com/JerromeL
-Rochak:https://github.com/rochak-ms
+# License
+
+MIT License
+
+# Contributors
+
+- Rochak: https://github.com/rochak-ms
+- Gina: https://github.com/GEEZEE91
+- Jerrome: https://github.com/JerromeL
+
+#
+
+`© 2022 Find A Meal -- Group-5(Rochak, Gina, Jerrome) Project-1`

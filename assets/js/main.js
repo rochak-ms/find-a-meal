@@ -119,11 +119,11 @@ let setNutrientObj = (obj) => {
   let protien = obj.totalNutrients.PROCNT.quantity === undefined ? 0 : obj.totalNutrients.PROCNT.quantity;
 
   // // add the nutrients to object for each ingredient
-  nutritionAmounts.KCALS += Math.round(totalKcals);
-  nutritionAmounts.FATS += Math.round(fats);
-  nutritionAmounts.CARBS += Math.round(carbs);
-  nutritionAmounts.SUGARS += Math.round(sugar);
-  nutritionAmounts.PROTIEN += Math.round(protien);
+  nutritionAmounts.KCALS = Math.round(totalKcals);
+  nutritionAmounts.FATS = Math.round(fats);
+  nutritionAmounts.CARBS = Math.round(carbs);
+  nutritionAmounts.SUGARS = Math.round(sugar);
+  nutritionAmounts.PROTIEN = Math.round(protien);
 
   setDOM();
 };
@@ -150,8 +150,11 @@ let setDOM = () => {
 // function to split serving when number added to input
 let splitServing = () => {
     let amountPeople = $('#amount-servings').val();
+    if(amountPeople(val > 0 )){
     for (const property in nutritionAmounts) {
         nutritionAmounts[property] /= amountPeople;
+    }} else{
+        return false;
     }
     setDOM();
 };
@@ -165,6 +168,7 @@ function addMealToDom(response){
     $("#recipe-img").attr("src", response.strMealThumb);
     $("#recipe-img").attr("alt", response.strMeal);
 
+    $("#ingredients").empty();
 
     let ingredients = 
     [{

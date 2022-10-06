@@ -45,6 +45,41 @@ THEN I should see the previous page with my old meal search results
 ![A user is provided with a Popup Modal with a close button on right side. Modals shows the meal tile, image, ingredients, instructions and nutritional values](./assets/images/Modal-details.gif)
 
 #
+## API Functionality 
+
+## The MealDB
+
+### Fetch the MealDb API, to search for recipes by meal name
+
+    Access Point: `https://www.themealdb.com/api/json/v1/1/search.php?s=${term}
+
+The ${term} parameter is determined by the search value that was entered in the search bar. If it is a valid search request, the API will respond with all recipes that contain that term.
+These fetch results are used to populate the search results page.
+We than create an on-click event listener that will obtain the selected recipe cards recipeID.
+
+The recipesID value is used in the used in the below API to fetch the full recipe details.
+
+    Access Point: https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeID}`
+
+Giving us the ingredients and instructions. We will than use these details to append to the recipe info card pop up
+
+## EDAMAM API 
+
+### Full Recipe Analysis Method – POST Request
+
+Returns the nutritional information based on a POST request of the body section containing the recipe content. 
+
+    Access Point: ‘https://api.edamam.com/api/nutrition-details?app_id=’
+
+The POST request submits the body parameters we specified that contains the recipe details. We set our POST body parameters to be the recipe title and ingredient list.
+
+    {“title” ("title"), “ingr”: (Array["ingredient List"])}
+
+The Ingredients List is sent as a JSON string object, containing the ingredients and measure values obtained from the mealdb API as objects.
+
+The response is returned from the API containing the nutritional analysis for the recipe based on the information provided. 
+
+#
 
 # Installation
 

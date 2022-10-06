@@ -173,6 +173,7 @@ img.infoImg{
 
 #close-popup {
   box-shadow: 0px 0px 3px 1px red;
+  background: black;
   position: absolute;
 } 
 
@@ -203,4 +204,8 @@ li{
     font-family: 'Abel', sans-serif!important;
     text-align: justify;
     padding: 0 10px;
+}
+
+.modal-card{
+  margin: 0!important;
 }

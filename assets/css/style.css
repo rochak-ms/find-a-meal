@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
-
-/* font-family: 'Abel', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Abel', sans-serif;
 font-family: 'Fjalla One', sans-serif;
 font-family: 'Maven Pro', sans-serif; */
 
@@ -15,7 +16,7 @@ font-family: 'Maven Pro', sans-serif; */
 body {
   animation: changeBg 20s infinite alternate linear;
   color: rgb(1, 1, 1);
-  font-family: 'Fjalla One', sans-serif;
+  font-family:'Poppins', sans-serif;
   min-height: 100vh;
   font-weight: bolder;
 }
@@ -35,16 +36,49 @@ body {
   }
 }
 
+.hero-body {
+  background-image: url("../images/dk-full-banner.png");
+  height: 10rem;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#101112
+}
+
+.hero h1{
+  color:transparent;
+  -webkit-text-stroke: 2px rgb(252, 252, 252);
+  background: url("../images/back.png");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 25s linear infinite;
+}
+
+@keyframes back{
+  100%{
+    background-position: 150rem 0;
+  }
+} 
+
+.hero.result-header{
+  font-family: 'Abel', sans-serif;
+}
+.navbar {
+  min-height: 0.25rem!important;
+  background-color: #b91818b8;
+}
 /* styling header title and user input section */
 .effect{
   line-height: 1.2em;
   color: #0000;
   text-shadow: 
     0 0 #000, 
-    0 4rem #1095c1;
+    0 4rem #a6350f;
   overflow: hidden;
   transition: .4s;
 }
+
 .effect:hover {
   text-shadow: 
     0 -4rem #000, 
@@ -55,18 +89,20 @@ form{
   width: 25rem;
   min-width: 10rem
 }
-.input{
+
+.p1-search{
   border:1px solid black;
-  width: 100%;
+  width: 150%;
   border-right: 0px solid;
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
   color: #fff;
-  background-color: #333;
+  background-color:  #333;
   text-align: center;
   box-shadow: 0 2px 8px 0 #e61415, 0px 11px 7px 0 rgb(0 0 0 / 19%);
 }
-.input::placeholder{
+
+.p1-search::placeholder{
   color: rgba(203, 195, 195, 0.613);
 }
 
@@ -81,14 +117,14 @@ form{
 
 /* styling the cards for recipe info */
 .card-image.is-size-2{
+
   font-size: 0!important;
 }
 
 .rec-card{
   box-shadow: 9px 1px 22px grey!important;
 }
-
-.column, .rec-card, img{
+.column, .rec-card, .card-image, img{
   border-radius: 2rem!important;
 }
 
@@ -109,4 +145,62 @@ form{
 
 .recipe-info:hover{
   opacity: 1;
+}
+
+.recipe-info{
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem!important;
+}
+
+p.title{
+  color: transparent !important;;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+img.infoImg{
+  width: 100%!important;
+  height: 24rem;
+  margin-top:0.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 1px 6px 4px grey;
+}
+
+#close-popup {
+  box-shadow: 0px 0px 3px 1px red;
+  position: absolute;
+} 
+
+.nutrition{
+  margin-bottom:0rem!important;
+}
+
+.panel-tabs, .input.is-warning, .button.has-background-info{
+  border-bottom: none!important;
+  margin-bottom: 0rem!important;
+  border-radius: 0rem!important;
+  text-align: center;
+}
+
+.input.is-warning::placeholder{
+  color:rgba(78, 74, 74, 0.758);
+  text-align: center;
+}
+th.is-warning, td{
+  border: 1px solid #333!important;
+}
+
+li{
+  font-family: 'Abel', sans-serif!important;
+  list-style-type: square;
+}
+#instructions{
+    font-family: 'Abel', sans-serif!important;
+    text-align: justify;
+    padding: 0 10px;
 }
